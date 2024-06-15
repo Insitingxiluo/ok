@@ -3,7 +3,7 @@ name: Deploy static site to GitHub Pages
 on:
   push:
     branches:
-      - main  # 确保这是你提交代码的分支名称
+      - main
 
 jobs:
   deploy:
@@ -17,4 +17,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .  # 确保这是你的 index.html 文件所在的位置
+        publish_dir: .
